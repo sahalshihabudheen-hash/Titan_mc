@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TitanMC • Best Mallu Server 24/7</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700;800&display=swap" rel="stylesheet">
+  <style>body{font-family:Poppins,system-ui,Arial,sans-serif}</style>
+</head>
+<body>
+  
+<canvas id="particles"></canvas>
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="brand">TitanMC</a>
+    <button class="burger" onclick="toggleMenu()">☰</button>
+    <div class="menu"><a href="index.html">Home</a><a href="gamemodes.html">Gamemodes</a><a href="news.html">News</a><a href="fames.html">Fames</a><a href="contact.html">Contact</a><a href="https://discord.gg/xwBBkWKQ" target="_blank" rel="noopener" class="cta">Discord</a></div>
+  </div>
+</nav>
+
+  <header class="hero">
+    <div>
+      <div class="badge">Asia's Mallu Community</div>
+      <h1 class="title">TitanMC</h1>
+      <div id="typing" class="tagline"></div>
+      <div class="ip-box">
+        <div>💻 <b>Java</b>: <code>play.tintanmc.online</code></div>
+        <div>📱 <b>Bedrock</b>: <code>play.titanmc.online</code> • <b>Port</b>: <code>19132</code></div>
+      </div>
+      <div class="row" style="justify-content:center">
+        <button class="btn" onclick="openJoin()">Join Now</button>
+        <a class="btn ghost" href="gamemodes.html">Explore Gamemodes</a>
+        <a class="btn ghost" href="https://discord.gg/xwBBkWKQ" target="_blank" rel="noopener">Join Discord</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="container grid">
+      <a class="card" href="gamemodes.html"><h3>⚔️ Gamemodes</h3><p>Survival, Anarchy, Lifesteal — pick your path.</p></a>
+      <a class="card" href="news.html"><h3>📰 News</h3><p>Latest updates, events, and announcements.</p></a>
+      <a class="card" href="fames.html"><h3>🏆 Fames</h3><p>Hall of Fame: top players & staff.</p></a>
+    </div>
+  </section>
+
+  <!-- Join Modal -->
+  <div class="modal" id="joinModal" aria-hidden="true">
+    <div class="modal-box">
+      <div class="modal-head">
+        <h4>Choose Your Edition</h4>
+        <button class="close" onclick="closeJoin()">✕</button>
+      </div>
+      <div class="row">
+        <div class="pill" onclick="choose('java')">💻 Java</div>
+        <div class="pill" onclick="choose('bedrock')">📱 Bedrock</div>
+      </div>
+      <div class="copy-box" id="copyBox">
+        <div class="copy-row">
+          <div>
+            <div class="badge" id="copyBadge">IP</div>
+            <code id="copyText">play.tintanmc.online</code>
+          </div>
+          <button id="copyBtn" class="copy" onclick="doCopy()">Copy</button>
+        </div>
+      </div>
+      <div style="margin-top:10px;color:var(--muted);font-size:13px">Tip: After copying, paste inside Minecraft → Multiplayer / Servers list.</div>
+    </div>
+  </div>
+
+  
+<footer class="footer">
+  <div style="margin-bottom:8px"><a href="https://discord.gg/xwBBkWKQ" target="_blank" rel="noopener" class="btn">Join our Discord</a></div>
+  <small>© TitanMC • Built with ♥ for the community</small>
+</footer>
+<script src="script.js"></script>
+
+</body>
+</html>

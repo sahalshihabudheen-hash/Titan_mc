@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TitanMC • Gamemodes</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  
+<canvas id="particles"></canvas>
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="brand">TitanMC</a>
+    <button class="burger" onclick="toggleMenu()">☰</button>
+    <div class="menu"><a href="index.html">Home</a><a href="gamemodes.html">Gamemodes</a><a href="news.html">News</a><a href="fames.html">Fames</a><a href="contact.html">Contact</a><a href="https://discord.gg/xwBBkWKQ" target="_blank" rel="noopener" class="cta">Discord</a></div>
+  </div>
+</nav>
+
+  <section class="section">
+    <div class="container">
+      <h1 class="title" style="font-size:42px">Gamemodes</h1>
+      <p class="tagline">Choose your challenge.</p>
+      <div class="grid" style="margin-top:16px">
+        <div class="card" onclick="openModal('Classic Minecraft survival with friends. Gather, build, explore & thrive together.')">
+          <h3>🌲 Survival</h3>
+          <p>Build, trade, explore — your story, your base.</p>
+        </div>
+        <div class="card" onclick="openModal('No rules. No limits. Full PvP, griefing and raiding allowed — survive if you can.')">
+          <h3>🔥 Anarchy</h3>
+          <p>Chaos realm where anything goes.</p>
+        </div>
+        <div class="card" onclick="openModal('Fight for hearts! Each kill steals a heart. Low on hearts? Play smart or perish.')">
+          <h3>❤️ Lifesteal</h3>
+          <p>Steal hearts and become unstoppable.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="modal" id="infoModal">
+    <div class="modal-box">
+      <div class="modal-head">
+        <h4>About this mode</h4>
+        <button class="close" onclick="closeInfo()">✕</button>
+      </div>
+      <div id="infoText" style="color:var(--muted)"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    function openModal(text){ 
+      document.getElementById('infoText').textContent = text; 
+      document.getElementById('infoModal').classList.add('show'); 
+    }
+    function closeInfo(){ document.getElementById('infoModal').classList.remove('show') }
+  </script>
+</body>
+</html>
